@@ -9,10 +9,11 @@ a traiter, en cours, prete, annulée)
 PHP en POO
 5 modules complémentaires:
 Gestion des résa
-Système de paiment en ligne
-Notation des plats
+Système de paiment en ligne (easy)
+Notation des plats (drop)
 système de mails
-génération facture pdf
+génération facture pdf (easy)
+gestion des stocks côté admin (dashboard)
 ...
 
 Due date: vendredi après midi
