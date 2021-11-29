@@ -1,0 +1,18 @@
+Projet PHP:
+
+site de restaurant (commande à emporter)
+User (session)
+Page menu
+commande(panier)
+page admin (modifier le menu,passer les commandes de:
+a traiter, en cours, prete, annulée)
+PHP en POO
+5 modules complémentaires:
+Gestion des résa
+Système de paiment en ligne
+Notation des plats
+système de mails
+génération facture pdf
+...
+
+Due date: vendredi après midi
