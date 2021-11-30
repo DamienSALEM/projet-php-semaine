@@ -1,16 +1,25 @@
 <?php
-require_once "config.php";
-$dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 
-try {
-    $pdo = new PDO($dsn, $user, $password);
+class DBconn
+{
+    private $pdo;
+    public function __construct()
+    {
+        require_once "config.php";
+        $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
+        try {
+            $this->pdo = new PDO($dsn, $user, $pass);
 
-    if ($pdo) {
-        echo "Connected to the $db database successfully!";
+            if ($this->pdo) {
+                echo "Connected to the $db database successfully!";
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
 
-$query = $pdo->query("SELECT * FROM categorie");
-$query->setFetchMode(PDO::FETCH_OBJ);
+    public function getPDO(): PDO
+    {
+        return $this->pdo;
+    }
+}
