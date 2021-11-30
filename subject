@@ -8,11 +8,10 @@ page admin (modifier le menu,passer les commandes de:
 a traiter, en cours, prete, annulée)
 PHP en POO
 5 modules complémentaires:
-Gestion des résa
-Système de paiment en ligne (easy)
-Notation des plats (drop)
-système de mails
-génération facture pdf (easy)
+Gestion des résa (100 places de resa. A reset chaque matin)
+Système de paiment en ligne (front+sauvegarde des données bancaires chiffrées)
+système de mails (mail pour récup le mdp, lors de la création d'un compte, lors d'un achat et lors d'une résa)
+génération facture pdf (envoyé la facture pdf par mail et générer un lien qui dure 1 mois pour récupérer la facture)
 gestion des stocks côté admin (dashboard)
 ...
 
