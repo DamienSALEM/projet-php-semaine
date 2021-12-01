@@ -1,6 +1,6 @@
 <?php
 
-class DBconn
+class DbConnection
 {
     private $pdo;
     public function __construct()

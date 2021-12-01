@@ -11,6 +11,10 @@ class DefaultController extends DbConnection
         $this->pdo = $this->getPDO();
     }
 
+    public function checkGet() {
+        if (isset($_GET)) return true;
+    }
+    
     public function checkPost() {
         if (isset($_POST)) return true;
     }
