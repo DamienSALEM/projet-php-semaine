@@ -10,7 +10,7 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="../Css/panier.css" />
+		<link rel="stylesheet" href="../public/css/panier.css" />
 		<title>Panier</title>
 	</head>
 	<body>

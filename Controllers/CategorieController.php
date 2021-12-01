@@ -1,12 +1,12 @@
 <?php
-require_once "D:\BTS\wamp64\www\projet php semaine\Controller\connectToBDD.php";
-class categorie extends DBconn
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once(__ROOT__.'../Database/connectToBDD.php');
+
+class Categorie extends DBconn
 {
     public function __construct()
     {
-        // $db = new Database;
-        // $this->pdo = $db->getPDO();
-        $this->pdo = (new DBconn)->getPDO();
+        $this->pdo = $this->getPDO();
     }
 
     public function getCategories()
@@ -19,15 +19,8 @@ class categorie extends DBconn
     }
     public function getCategorie(int $id)
     {
-        // $id = $_GET["id"];
         $query = $this->pdo->query("SELECT * FROM categorie WHERE id=$id");
         $query->setFetchMode(\PDO::FETCH_OBJ);
         $categorie = $query->fetch();
     }
-}
-$categorieClass = new Categorie;
-if (isset($_GET["id"]) && !empty($_GET["id"]) && is_numeric($_GET["id"])) {
-    $categorieClass->getCategorie($_GET["id"]);
-} else {
-    $categorieClass->getCategories();
 }
