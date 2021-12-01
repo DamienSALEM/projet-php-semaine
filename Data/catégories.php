@@ -1,5 +1,5 @@
 <?php
-require_once "D:\BTS\wamp64\www\projet php semaine\Controller\connectToBDD.php";
+require_once "..\Controller\connectToBDD.php";
 class categorie extends DBconn
 {
     public function __construct()
