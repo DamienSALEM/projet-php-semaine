@@ -6,7 +6,7 @@ class AdminController extends DefaultController
 {
     public function __construct() {
         parent::__construct();
-        $this->$table = 'admin';
+        $this->$table = 'admins';
     }
 
     public function add() {
@@ -28,11 +28,11 @@ class AdminController extends DefaultController
 
         $query = $this->$pdo->query(
             "SELECT COUNT(*)
-             FROM user
+             FROM $table
              WHERE username = $_POST['username']
              AND password = $_POST['password']"
         );
-        $result = $query->fetchAll();
+        $result = $query->fetch();
 
         if ($result > 0) return true;
         return false;
