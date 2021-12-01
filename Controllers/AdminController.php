@@ -26,11 +26,14 @@ class AdminController extends DefaultController
     public function login() {
         if (!$this->checkGet()) return false;
 
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
         $query = $this->$pdo->query(
             "SELECT COUNT(*)
              FROM $table
-             WHERE username = $_POST['username']
-             AND password = $_POST['password']"
+             WHERE username = $username
+             AND password = $password"
         );
         $result = $query->fetch();
 
