@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
-body{
-  background-image: url("../assets/FondProd.jpg");
-}
-
 .titreProduits{
   text-align: center;
   color: white;

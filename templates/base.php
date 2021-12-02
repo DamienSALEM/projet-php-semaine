@@ -10,7 +10,6 @@
     <?php
         include("navbar.php");
     ?>
-
     <main>
         <?= $content ?>
     </main>

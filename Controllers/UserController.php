@@ -5,9 +5,17 @@ require_once(__ROOT__.'/Models/UserModel.php');
 class UserController extends DefaultController
 {
     public function index() {
-        $this->render("Profil/index", [
+        $this->render("profil", [
             "user" => (new UserModel)->find($_SESSION["user"])
         ]);
+    }
+
+    public function login_page() {
+        $this->render("login", []);
+    }
+
+    public function register_page() {
+        $this->render("register", []);
     }
 
     public function login($data) {
