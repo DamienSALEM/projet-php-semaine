@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/navbar.css">
   </head>
   <body>
     <header class="container-fluid navbar navbar-expand-lg">
@@ -18,13 +18,13 @@
              <i class="fas fa-bars"></i>
            </span>
         </button>
-        <img class="logo" src="../public/assets/logo.png" />
+        <img class="logo" src="public/assets/logo.png" />
       </div>
       <nav class="collapse navbar-collapse row" id="navbar-content">
         <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
           <li class="nav-item">
             <a class="nav-link">
-              <img class="side-icon" src="../public/assets/profile.png" />
+              <img class="side-icon" src="public/assets/profile.png" />
             </a>
           </li>
           <li class="nav-item">
@@ -34,17 +34,17 @@
             <a class="nav-link">Menu</a>
           </li>
           <li id="logo-container" class="nav-item d-lg-block">
-            <img class="logo" src="../public/assets/logo.png" />
+            <img class="logo" src="public/assets/logo.png" />
           </li>
           <li class="nav-item">
-            <a class="nav-link">Magasin</a>
+            <a class="nav-link" href="?page=booking">Magasin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link">Nous contacter</a>
           </li>
           <li class="nav-item">
             <a href="panierView.php" class="nav-link">
-              <img class="side-icon" src="../public/assets/cart.png" />
+              <img class="side-icon" src="public/assets/cart.png" />
             </a>
           </li>
         </ul>

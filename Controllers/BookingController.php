@@ -1,9 +1,10 @@
 <?php
-require_once(__ROOT__.'/Core/DefaultModel.php');
+require_once(__ROOT__.'/Core/DefaultController.php');
+require_once(__ROOT__.'/Models/BookingModel.php');
 
-class AdminModel extends DefaultModel
+class BookingController extends DefaultController
 {
-    public function __construct() {
+    /*public function __construct() {
         parent::__construct();
         $this->$table = 'booking';
     }
@@ -20,6 +21,12 @@ class AdminModel extends DefaultModel
 
         $request = "UPDATE $table SET (user_id=?, nb_people=?, date_time=?)";
         $this->save($request, $_POST);
+    }*/
+
+    public function index() {
+        $this->render("booking", [
+            "booking" => (new BookingModel)->findAll()
+        ]);
     }
 }
 ?>
