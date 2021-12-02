@@ -2,21 +2,13 @@
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once(__ROOT__.'../Database/connectToBDD.php');
 
-class DefaultController extends DbConnection
+class DefaultModel extends DbConnection
 {
     protected $table;
 
     public function __construct() {
         parent::__construct();
         $this->pdo = $this->getPDO();
-    }
-
-    public function checkGet() {
-        if (isset($_GET)) return true;
-    }
-    
-    public function checkPost() {
-        if (isset($_POST)) return true;
     }
 
     public function find(int $id) {

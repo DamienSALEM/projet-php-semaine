@@ -1,8 +1,8 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Core/DefaultController.php');
+require_once(__ROOT__.'../Core/DefaultModel.php');
 
-class AdminController extends DefaultController
+class AdminModel extends DefaultModel
 {
     public function __construct() {
         parent::__construct();
@@ -24,11 +24,11 @@ class AdminController extends DefaultController
     }
 
     public function login() {
-        if (!$this->checkGet()) return false;
+        if (!$this->checkPost()) return false;
 
         $username = $_POST['username'];
         $password = $_POST['password'];
-        
+
         $query = $this->$pdo->query(
             "SELECT COUNT(*)
              FROM $table
