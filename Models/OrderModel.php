@@ -1,44 +1,21 @@
 <?php
+require_once(__ROOT__.'/Database/connectToBDD.php');
 
-class OrderModel {
-
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $date;
-
-    /**
-     * @var string
-     */
-    private $state;
-
-
-    public function getId() {
-
-        return $this->id;
-    
+class OrdersModel extends DbConnection
+{
+    public function __construct() {
+        parent::__construct();
+        $this->$table = 'orders';
     }
 
-    public function getDate() {
-
-        return $this->date;
-
+    public function add($data) {
+        $request = "INSERT INTO $table VALUES (?, ?)";
+        $this->save($request, $_POST);
     }
 
-    public function getState() {
-
-        return $this->state;
-
-    }
-
-    public function setState(string $state) {
-
-        $this->state = $state;
-
+    public function update($data) {
+        $request = "UPDATE $table SET (date=?, state=?)";
+        $this->save($request, $_POST);
     }
 }
+?>

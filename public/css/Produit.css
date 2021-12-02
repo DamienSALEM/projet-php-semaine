@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background-image: url("../assets/FondProd.jpg");
+}
+
+.titreProduits{
+  text-align: center;
+  color: white;
+  font-weight: 1500;
+}
+
+.ligneProduit{
+  text-align: center;
+  margin-top: 5%;
+}
+.element{
+  background-color: rgb(255, 255, 255);
+  border: solid 1px black;
+}
+.bouttonPanier{
+  background-color: white;
+  border: solid black 1px;
+}
+.bouttonPanier:hover{
+  background-color: rgb(240, 240, 240);
+}

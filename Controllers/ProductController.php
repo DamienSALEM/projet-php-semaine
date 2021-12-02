@@ -1,37 +1,25 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Database/connectToBDD.php');
+require_once(__ROOT__.'/Database/connectToBDD.php');
 
-class ProductController extends DBconn
+class ProductModel extends DbConnection
 {
     public function __construct() {
-        $this->pdo = $this->getPDO();
+        parent::__construct();
+        $this->$table = 'categories';
     }
 
-    public function getAllProducts() {
-        $query = $this->pdo->query("SELECT * FROM products");
-        $query->setFetchMode(PDO::FETCH_OBJ);
+    public function add() {
+        if (!$this->checkPost()) return false;
 
-        return $query->fetchAll();
+        $request = "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $this->save($request, $_POST);
     }
 
-    public function getProduct(int $id) {
-        $query = $this->pdo->query("SELECT * FROM products WHERE id = $id");
-        $query->setFetchMode(PDO::FETCH_OBJ);
+    public function update() {
+        if (!$this->checkPost()) return false;
 
-        return $query->fetchAll();
-    }
-
-    public function addProduct(array $product) {
-        $query = $this->pdo->prepare('INSERT INTO products VALUE (?, ?, ?, ?, ?, ?, ?, ?)');
-        $query->execute($product);
-    }
-
-    public function deleteProduct() {
-
-    }
-
-    public function updateProduct() {
-
+        $request = "UPDATE $table SET (name=?, category_id=?, brand=?, origin_country=?, stock=?, price=?, promotion=?, image=?, is_in_menu=?)";
+        $this->save($request, $_POST);
     }
 }
+?>

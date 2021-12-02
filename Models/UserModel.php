@@ -1,119 +1,41 @@
 <?php
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class UserModel {
-    
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $firstName;
-
-    /**
-     * @var string
-     */
-    private $lastName;
-
-    /**
-     * @var string
-     */
-    private $email;
-
-    /** 
-     * @var string
-     */
-    private $password;
-
-    
-
-    /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
-        return $this->id;
+class UserModel extends DefaultModel
+{
+    public function __construct() {
+        parent::__construct();
+        $this->$table = 'users';
     }
 
-    /**
-     * Get the value of firstName
-     */ 
-    public function getFirstName()
-    {
-        return $this->firstName;
+    public function add($data) {
+        if (!$this->checkPost()) return false;
+
+        $request = "INSERT INTO $table VALUES (?, ?, ?, ?)";
+        $this->save($request, $data);
     }
 
-    /**
-     * Set the value of firstName
-     *
-     * @return  self
-     */ 
-    public function setFirstName($firstName)
-    {
-        $this->firstName = $firstName;
+    public function update($data) {
+        if (!$this->checkPost()) return false;
 
-        return $this;
+        $request = "UPDATE $table SET (firstname=?, lastname=?, email_address=?, password=?)";
+        $this->save($request, $data);
     }
 
-    /**
-     * Get the value of lastName
-     */ 
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
+    public function userExist($username, $password) {
+        $username = $data['username'];
+        $password = $data['password'];
 
-    /**
-     * Set the value of lastName
-     *
-     * @return  self
-     */ 
-    public function setLastName($lastName)
-    {
-        $this->lastName = $lastName;
+        $query = $this->$pdo->query(
+            "SELECT COUNT(*)
+             FROM $table
+             WHERE username = $username
+             AND password = $password"
+        );
+        $result = $query->fetch();
 
-        return $this;
-    }
-
-    /**
-     * Get the value of email
-     */ 
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set the value of email
-     *
-     * @return  self
-     */ 
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of password
-     */ 
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * Set the value of password
-     *
-     * @return  self
-     */ 
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
+        if ($result > 0) return true;
+        return false;
     }
 }
+?>

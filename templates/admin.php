@@ -173,6 +173,6 @@
     </script>
 
 </body>
-<script type="text/javascript" src="../public/js/adminView.js"></script>
+<script type="text/javascript" src="../public/js/admin.js"></script>
 
 </html>

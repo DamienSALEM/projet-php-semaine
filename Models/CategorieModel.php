@@ -1,27 +1,21 @@
 <?php
+require_once(__ROOT__.'/Database/connectToBDD.php');
 
-class CategorieMod {
-
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $name;
-
-
-    public function getId() {
-
-        return $this->id;
-    
+class CategorieModel extends DbConnection
+{
+    public function __construct() {
+        parent::__construct();
+        $this->$table = 'categories';
     }
 
-    public function getName() {
+    public function add($data) {
+        $request = "INSERT INTO $table VALUES (?)";
+        $this->save($request, $_POST);
+    }
 
-        return $this->$name;
-
+    public function update($data) {
+        $request = "UPDATE $table SET (name=?)";
+        $this->save($request, $_POST);
     }
 }
+?>

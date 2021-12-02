@@ -1,50 +1,22 @@
 <?php
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class BookingModel {
+class BookingModel extends DefaultModel
+{
+    protected $table = 'booking';
 
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var int
-     */
-    private $nbPeople;
-
-    /**
-     * @var string
-     */
-    private $dateTime;
-
-
-    public function getId() {
-
-        return $this->id;
-    
+    public function __construct() {
+        parent::__construct();
     }
 
-    public function getNbPeople() {
-
-        return $this->$nbPeople;
-
+    public function add($data) {
+        $request = "INSERT INTO $table VALUES (?, ?, ?)";
+        $this->save($request, $data);
     }
 
-    public function setNbPeople(number $nbPeople) {
-        
-        $this->nbPeople = $nbPeople;
-
-    }
-
-    public function getDateTime() {
-
-        return $this->dateTime;
-
-    }
-
-    public function setDateTime(string $dateTime) {
-
-        $this->dateTime = $dateTime;
-
+    public function update($data) {
+        $request = "UPDATE $table SET (user_id=?, nb_people=?, date_time=?)";
+        $this->save($request, $data);
     }
 }
+?>

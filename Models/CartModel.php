@@ -1,27 +1,21 @@
 <?php
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class CartModel {
-
-    /**
-     * @var int
-     */
-    private $useIid;
-
-    /**
-     * @var int
-     */
-    private $produtId;
-
-    
-    public function getUserId() {
-
-        return $this->userId;
-    
+class AdminModel extends DefaultModel
+{
+    public function __construct() {
+        parent::__construct();
+        $this->$table = 'cart';
     }
 
-    public function getProductId() {
+    public function add($data) {
+        $request = "INSERT INTO $table VALUES (?, ?)";
+        $this->save($request, $data);
+    }
 
-        return $this->productId;
-
+    public function update($data) {
+        $request = "UPDATE $table SET (user_id=?, product_id=?)";
+        $this->save($request, $data);
     }
 }
+?>
