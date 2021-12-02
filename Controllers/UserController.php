@@ -18,4 +18,8 @@ class UserController extends DefaultController
         }
         return false;
     }
+
+    public function disconnect() {
+        if ($_SESSION["user"]) session_destroy();
+    }
 }

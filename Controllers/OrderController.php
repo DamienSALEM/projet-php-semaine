@@ -1,7 +1,7 @@
 <?php
-require_once(__ROOT__.'/Database/connectToBDD.php');
+require_once(__ROOT__.'/Core/DefaultController.php');
 
-class OrdersModel extends DbConnection
+class OrderController extends DefaultController
 {
     public function __construct() {
         parent::__construct();

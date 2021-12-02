@@ -1,25 +1,13 @@
 <?php
-require_once(__ROOT__.'/Database/connectToBDD.php');
+require_once(__ROOT__.'/Core/DefaultController.php');
+require_once(__ROOT__.'/Models/ProductModel.php');
 
-class ProductModel extends DbConnection
+class ProductController extends DefaultController
 {
-    public function __construct() {
-        parent::__construct();
-        $this->$table = 'categories';
-    }
-
-    public function add() {
-        if (!$this->checkPost()) return false;
-
-        $request = "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $this->save($request, $_POST);
-    }
-
-    public function update() {
-        if (!$this->checkPost()) return false;
-
-        $request = "UPDATE $table SET (name=?, category_id=?, brand=?, origin_country=?, stock=?, price=?, promotion=?, image=?, is_in_menu=?)";
-        $this->save($request, $_POST);
+    public function index() {
+        $this->render('products', [
+            'products' => (new ProductModel)->findAll()
+        ]);
     }
 }
 ?>
