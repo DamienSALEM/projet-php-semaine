@@ -1,55 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
-body {
-  background-image: url("../assets/Fond_panier.jpg")
-}
-
-/*Affiche un texte en cas de panier vide*/
-.panierVide {
-  display: none;
+.titrePanier{
   text-align: center;
-  margin: auto;
-  margin-top: 15%;
-  font-size: 25px;
-  min-width: 200px;
-  max-width: 800px;
-  width: auto;
-
-  min-height: 500px;
-  background-color: rgb(255, 255, 255, 0.7);
+  margin-top: 10%;
+  font-weight: 1000;
 }
-
-.panierVide input,.panierPlein input {
-  color: black;
-  border: solid black 1px;
-  background-color: white;
-  width: 140px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 20px;
-  transition: 1s;
-}
-
-.panierVide h1, .panierPlein h1 {
-  margin-top: 15%;
-  font-weight: 800;
-}
-
-.panierPlein {
+.element{
   display: flex;
+  flex-direction: row;
+  align-items: center;  
   text-align: center;
-  justify-content: center;
-  margin-top: 15%;
-  font-size: 25px;
-  min-width: 800px;
-  min-height: 500px;
-  background-color: rgb(255, 255, 255, 0.7);
+  margin-top: 4%;
+  font-weight: 600 ;
+  border-bottom: solid 1px rgb(214, 214, 214);
 }
+.bouttonCommander{
+  width: 300px;
+  height: 50px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 
-.panierPlein input{
-  margin-top: 15%;
+  background-color: white;
+  border: solid black 1px;
+}
+.bouttonCommander:hover{
+  background-color: rgba(230, 230, 230, 0.8);
+}
+.blockProduit{
+  border: solid 1px black;
+
+}
+.imageProduit{
+  vertical-align: baseline;
+}
+.blockInfo{
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5%;
+}
+.redirectionPlacement{
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 2%;
+}
+.bouttonProduit{
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  border: solid black 1px;
+  font-weight: 700;
+}
+.bouttonProduit:hover{
+  background-color: rgba(230, 230, 230, 0.8);
 }

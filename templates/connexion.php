@@ -12,15 +12,16 @@
 </head>
 
 <body>
+    <?php include('navbar.php'); ?>
     <div class="container">
         <form action="" method="POST">
             <h3>Connexion</h3>
-            <label for="uuser">Nom de l'utilisateur</label>
-            <input type="text" id="user" name="username" placeholder="Nom d'utilisateur" pattern="[a-zA-Z0-9]+"
+            <label for="uuser">L'Email de l'utilisateur</label>
+            <input type="email" id="email" name="email" placeholder="dupont@yahoo.com" pattern="[a-zA-Z0-9]+"
                 minlength="5" required>
             <label for="pass">Mot de passe</label>
-            <input type="text" id="pass" name="password" placeholder="Mot de Passe" pattern="[0-9]+" maxlength="30"
-                required>
+            <input type="text" id="pass" name="password" type="hidden" placeholder="Mot de Passe" pattern="[0-9]+"
+                maxlength="30" required>
             <div class="row">
                 <!-- <div class="col-50">
                     <div class="row">

@@ -1,11 +1,13 @@
 <?php
 require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class AdminModel extends DefaultModel
+class CartModel extends DefaultModel
 {
+
+    protected $table = 'cart';
+
     public function __construct() {
         parent::__construct();
-        $this->$table = 'cart';
     }
 
     public function add($data) {

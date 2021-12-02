@@ -5,8 +5,8 @@ require_once(__ROOT__.'/Models/ProductModel.php');
 class ProductController extends DefaultController
 {
     public function index() {
-        $this->render('products', [
-            'products' => (new ProductModel)->findAll()
+        $this->render("products", [
+            "products" => (new ProductModel)->findAll()
         ]);
     }
 }

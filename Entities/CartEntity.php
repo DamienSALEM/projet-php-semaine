@@ -1,6 +1,6 @@
 <?php
 
-class CartModel {
+class CartEntity {
 
     /**
      * @var int

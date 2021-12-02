@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        include("navbar.php");
+    ?>
 
     <main>
-
+        <?= $content ?>
     </main>
 
 </body>

@@ -1,6 +1,6 @@
 <?php
 
-class CategorieMod {
+class CategorieEntity {
 
     /**
      * @var int

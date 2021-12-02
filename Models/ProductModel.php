@@ -1,11 +1,12 @@
 <?php
-require_once(__ROOT__.'/Database/connectToBDD.php');
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class ProductModel extends DbConnection
+class ProductModel extends DefaultModel
 {
+    protected $table = 'products';
+
     public function __construct() {
         parent::__construct();
-        $this->$table = 'categories';
     }
 
     public function add($data) {
