@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__.'/Database/connectToBDD.php');
+require_once(__ROOT__.'/Database/DbConnection.php');
 
 class OrdersModel extends DbConnection
 {

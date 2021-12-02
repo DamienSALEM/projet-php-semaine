@@ -1,6 +1,6 @@
 <?php
 
-class BookingModel {
+class BookingEntity {
 
     /**
      * @var int

@@ -23,27 +23,27 @@
       <nav class="collapse navbar-collapse row" id="navbar-content">
         <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
           <li class="nav-item">
-            <a href="templates/profil.php" class="nav-link">
+            <a href="../templates/profil.php" class="nav-link">
               <img class="side-icon" src="public/assets/profile.png" />
             </a>
           </li>
           <li class="nav-item">
-            <a href="index.php" class="nav-link">Accueil</a>
+            <a href="?page=homepage" class="nav-link">Accueil</a>
           </li>
           <li class="nav-item">
-            <a href="templates/booking.php" class="nav-link">Reserver</a>
+            <a href="?page=booking" class="nav-link">Reserver</a>
           </li>
           <li id="logo-container" class="nav-item d-lg-block">
             <img class="logo" src="public/assets/logo.png" />
           </li>
           <li class="nav-item">
-            <a href="Produit.php" class="nav-link">Magasin</a>
+            <a href="?page=products" class="nav-link">Magasin</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Nous contacter</a>
           </li>
           <li class="nav-item">
-            <a href=" templates/Panier.php" class="nav-link">
+            <a href="?page=cart" class="nav-link">
               <img class="side-icon" src="public/assets/cart.png" />
             </a>
           </li>
