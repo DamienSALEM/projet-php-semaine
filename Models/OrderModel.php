@@ -9,16 +9,12 @@ class OrdersModel extends DbConnection
         $this->$table = 'orders';
     }
 
-    public function add() {
-        if (!$this->checkPost()) return false;
-
+    public function add($data) {
         $request = "INSERT INTO $table VALUES (?, ?)";
         $this->save($request, $_POST);
     }
 
-    public function update() {
-        if (!$this->checkPost()) return false;
-
+    public function update($data) {
         $request = "UPDATE $table SET (date=?, state=?)";
         $this->save($request, $_POST);
     }

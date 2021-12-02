@@ -9,22 +9,23 @@ class UserModel extends DefaultModel
         $this->$table = 'users';
     }
 
-    public function add() {
+    public function add($data) {
         if (!$this->checkPost()) return false;
 
         $request = "INSERT INTO $table VALUES (?, ?, ?, ?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 
-    public function update() {
+    public function update($data) {
         if (!$this->checkPost()) return false;
 
         $request = "UPDATE $table SET (firstname=?, lastname=?, email_address=?, password=?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 
     public function login($username, $password) {
-        if (!$this->checkPost()) return false;
+        $username = $data['username'];
+        $password = $data['password'];
 
         $query = $this->$pdo->query(
             "SELECT COUNT(*)

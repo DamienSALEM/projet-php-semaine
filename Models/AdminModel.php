@@ -9,22 +9,19 @@ class AdminModel extends DefaultModel
         $this->$table = 'admins';
     }
 
-    public function add() {
-        if (!$this->checkPost()) return false;
-
+    public function add($data) {
         $request = "INSERT INTO $table VALUES (?, ?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 
-    public function update() {
-        if (!$this->checkPost()) return false;
-
+    public function update($data) {
         $request = "UPDATE $table SET (username=?, password=?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 
-    public function login($username, $password) {
-        if (!$this->checkPost()) return false;
+    public function login($data) {
+        $username = $data['username'];
+        $password = $data['password'];
 
         $query = $this->$pdo->query(
             "SELECT COUNT(*)

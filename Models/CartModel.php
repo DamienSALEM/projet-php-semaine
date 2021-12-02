@@ -9,18 +9,14 @@ class AdminModel extends DefaultModel
         $this->$table = 'cart';
     }
 
-    public function add() {
-        if (!$this->checkPost()) return false;
-
+    public function add($data) {
         $request = "INSERT INTO $table VALUES (?, ?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 
-    public function update() {
-        if (!$this->checkPost()) return false;
-
+    public function update($data) {
         $request = "UPDATE $table SET (user_id=?, product_id=?)";
-        $this->save($request, $_POST);
+        $this->save($request, $data);
     }
 }
 ?>
