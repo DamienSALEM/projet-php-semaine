@@ -3,10 +3,23 @@
 *{
   font-family: 'Roboto', sans-serif;
 }
+
 .titreProduits{
   text-align: center;
 }
 
 .ligneProduit{
   text-align: center;
+  margin-top: 5%;
+}
+.element{
+  background-color: rgb(255, 255, 255);
+  border: solid 1px black;
+}
+.bouttonPanier{
+  background-color: white;
+  border: solid black 1px;
+}
+.bouttonPanier:hover{
+  background-color: rgb(240, 240, 240);
 }

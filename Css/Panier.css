@@ -5,7 +5,7 @@
 }
 
 body{
-  background-image: url("../Image/Fond_panier.jpg")
+  background-image: url("../Image/caveVin.jpg")
 }
 
 
@@ -58,4 +58,11 @@ body{
 }
 
 
+.element{
+  
+}
 
+.bouttonCommander{
+  margin-left: 50%;
+  transform: translate(-50%);
+}
