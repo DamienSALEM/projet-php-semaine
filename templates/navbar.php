@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/navbar.css">
   </head>
   <body>
     <header class="container-fluid navbar navbar-expand-lg">
@@ -18,7 +18,7 @@
              <i class="fas fa-bars"></i>
            </span>
         </button>
-        <img class="logo" src="../public/assets/logo.png" />
+        <img class="logo" src="public/assets/logo.png" />
       </div>
       <nav class="collapse navbar-collapse row" id="navbar-content">
         <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
@@ -34,7 +34,7 @@
             <a href="../templates/reservation.php" class="nav-link">Reserver</a>
           </li>
           <li id="logo-container" class="nav-item d-lg-block">
-            <img class="logo" src="../public/assets/logo.png" />
+            <img class="logo" src="public/assets/logo.png" />
           </li>
           <li class="nav-item">
             <a href="Produit.php" class="nav-link">Magasin</a>

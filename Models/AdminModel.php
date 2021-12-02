@@ -1,6 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Core/DefaultModel.php');
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
 class AdminModel extends DefaultModel
 {
@@ -19,19 +18,19 @@ class AdminModel extends DefaultModel
         $this->save($request, $data);
     }
 
-    public function login($data) {
+    public function adminExist($data) {
         $username = $data['username'];
         $password = $data['password'];
 
         $query = $this->$pdo->query(
-            "SELECT COUNT(*)
+            "SELECT id
              FROM $table
              WHERE username = $username
              AND password = $password"
         );
         $result = $query->fetch();
 
-        if ($result > 0) return true;
-        return false;
+        if ($result) return $result;
+        return null;
     }
 }

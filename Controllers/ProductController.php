@@ -8,14 +8,18 @@ class ProductModel extends DbConnection
         $this->$table = 'categories';
     }
 
-    public function add($data) {
+    public function add() {
+        if (!$this->checkPost()) return false;
+
         $request = "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $this->save($request, $data);
+        $this->save($request, $_POST);
     }
 
-    public function update($data) {
+    public function update() {
+        if (!$this->checkPost()) return false;
+
         $request = "UPDATE $table SET (name=?, category_id=?, brand=?, origin_country=?, stock=?, price=?, promotion=?, image=?, is_in_menu=?)";
-        $this->save($request, $data);
+        $this->save($request, $_POST);
     }
 }
 ?>

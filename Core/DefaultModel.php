@@ -1,6 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Database/connectToBDD.php');
+require_once(__ROOT__.'/Database/Dbconnection.php');
 
 class DefaultModel extends DbConnection
 {
@@ -8,31 +7,30 @@ class DefaultModel extends DbConnection
 
     public function __construct() {
         parent::__construct();
-        $this->pdo = $this->getPDO();
     }
 
     public function find(int $id) {
-        $query = $pdo->query("SELECT * FROM $table WHERE id = $id");
+        $query = $this->pdo->query("SELECT * FROM $this->table WHERE id = $id");
         $query->setFetchMode(PDO::FETCH_OBJ);
 
         return $query->fetch();
     }
 
     public function findAll() {
-        $query = $pdo->query("SELECT * FROM $table");
+        $query = $this->pdo->query("SELECT * FROM $this->table");
         $query->setFetchMode(PDO::FETCH_OBJ);
 
         return $query->fetchAll();
     }
 
     public function save(string $request, array $item) {
-        $query = $pdo->prepare($request);
+        $query = $this->pdo->prepare($request);
 
         return $query->execute($item);
     }
 
     public function delete(int $id) {
-        return $pdo->query("DELETE FROM $table WHERE id = $id");
+        return $this->pdo->query("DELETE FROM $this->table WHERE id = $id");
     }
 }
 ?>

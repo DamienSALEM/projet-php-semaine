@@ -1,12 +1,12 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Core/DefaultModel.php');
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class AdminModel extends DefaultModel
+class BookingModel extends DefaultModel
 {
+    protected $table = 'booking';
+
     public function __construct() {
         parent::__construct();
-        $this->$table = 'booking';
     }
 
     public function add($data) {
