@@ -1,7 +1,7 @@
 <?php
-require_once(__ROOT__.'/Database/DbConnection.php');
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
-class ProductModel extends DbConnection
+class ProductModel extends DefaultModel
 {
     protected $table = 'products';
 

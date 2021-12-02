@@ -9,31 +9,30 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
   />
-		<link rel="stylesheet" href="../public/css/panier.css" />
+		<link rel="stylesheet" href="public/css/panier.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Panier</title>
 	</head>
 	<body>
-    <?php include('navbar.php'); ?>
 		<h1 class="titrePanier">Votre panier</h1>
 		<div class="container blockProduit">
 				<div class="element row">
-					<div class="col-4"><img src="../Image/bouteil.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="public/assets/bouteille.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Domaine Leroy Chambertin Grand Cru</p></div>
 						<div class="col-4"><p>855€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_2.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="public/assets/bouteille_2.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Julia noventa</p></div>
 						<div class="col-4"><p>15€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_3.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="public/assets/bouteille_3.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Vin pas ouf</p></div>
 						<div class="col-4"><p>0.15€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_4.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="public/assets/bouteille_4.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Vin rouge LA VILLAGEOISE</p></div>
 						<div class="col-4"><p>8655€</p></div>
 				</div>

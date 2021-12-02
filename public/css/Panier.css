@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
-*{
-  font-family: 'Roboto', sans-serif;
-}
-
-
 .titrePanier{
   text-align: center;
   margin-top: 10%;
@@ -24,7 +19,8 @@
   height: 50px;
   margin-left: 50%;
   transform: translate(-50%);
-  margin-top: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 
   background-color: white;
   border: solid black 1px;
@@ -34,13 +30,13 @@
 }
 .blockProduit{
   border: solid 1px black;
-  display: none;
+
 }
 .imageProduit{
   vertical-align: baseline;
 }
 .blockInfo{
-  display: flex;
+  display: none;
   flex-direction: column;
   text-align: center;
   margin-top: 5%;

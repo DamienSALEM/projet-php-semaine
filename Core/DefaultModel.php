@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__.'/Database/Dbconnection.php');
+require_once(__ROOT__.'/Database/DbConnection.php');
 
 class DefaultModel extends DbConnection
 {
