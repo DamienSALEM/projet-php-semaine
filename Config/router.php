@@ -1,6 +1,11 @@
 <?php
 
 require_once(__ROOT__.'/Controllers/BookingController.php');
+require_once(__ROOT__.'/Controllers/CartController.php');
+require_once(__ROOT__.'/Controllers/OrderController.php');
+require_once(__ROOT__.'/Controllers/AdminController.php');
+require_once(__ROOT__.'/Controllers/ProductController.php');
+
 
  if (isset($_GET["page"]) && !empty($_GET["page"])) {
      switch ($_GET["page"]) {

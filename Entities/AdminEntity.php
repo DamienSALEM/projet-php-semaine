@@ -1,6 +1,6 @@
 <?php
 
-class AdminModel {
+class AdminEntity {
 
     /**
      * @var int

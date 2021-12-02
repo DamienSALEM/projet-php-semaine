@@ -8,7 +8,7 @@ require_once(__ROOT__.'/Models/OrderModel.php');
 class AdminController extends DefaultController
 {
     public function index() {
-        $this->render("Admin/index", [
+        $this->render("admin", [
             "products" => (new ProductModel)->findAll(),
             "booking" => (new BookingModel)->findAll(),
             "orders" => (new OrderModel)->findAll()
