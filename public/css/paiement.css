@@ -1,3 +1,5 @@
+/* paiment.css s'applique pour connexionView, inscriptionView & paiementView !!! */
+
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -17,7 +19,7 @@
   width: 40%;
   background-color: #f2f2f2;
   /* margin: 100px 50px; */
-  margin: 100px auto;
+  margin: auto;
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgrey;
   border-radius: 3px;
@@ -43,7 +45,7 @@ label {
 }
 
 .btn {
-  background-color: #ffbe0a;
+  background-color: #ff9a15;
   color: white;
   padding: 12px;
   margin: 10px 0;
