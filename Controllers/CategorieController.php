@@ -8,12 +8,16 @@ class CategorieModel extends DbConnection
         $this->$table = 'categories';
     }
 
-    public function add($data) {
+    public function add() {
+        if (!$this->checkPost()) return false;
+
         $request = "INSERT INTO $table VALUES (?)";
         $this->save($request, $_POST);
     }
 
-    public function update($data) {
+    public function update() {
+        if (!$this->checkPost()) return false;
+
         $request = "UPDATE $table SET (name=?)";
         $this->save($request, $_POST);
     }

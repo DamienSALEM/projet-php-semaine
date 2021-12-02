@@ -1,6 +1,4 @@
 <?php
-namespace Core\Controller;
-
 class DefaultController
 {
     public function render(string $pathView, array $params = []) {

@@ -1,6 +1,5 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'../Core/DefaultModel.php');
+require_once(__ROOT__.'/Core/DefaultModel.php');
 
 class UserModel extends DefaultModel
 {
@@ -23,7 +22,7 @@ class UserModel extends DefaultModel
         $this->save($request, $data);
     }
 
-    public function login($username, $password) {
+    public function userExist($username, $password) {
         $username = $data['username'];
         $password = $data['password'];
 
