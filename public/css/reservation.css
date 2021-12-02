@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+.titreProduits{
+  text-align: center;
+  margin-top: 15%;
+}
+
+#datelb{
+  width: 150px;
+}
+#nombreReservation{
+  width: 70px;
+  background-color: white;
+  border: solid 1px black;
+}
+.elementPage{
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 500px;
+}
+.il{
+  text-align: center;
+}
+#bouttonReserver{
+  width: 150px;
+  height: 40px;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-top: 5%;
+
+  background-color: white;
+  border: solid black 1px;
+}
+#bouttonReserver:hover{
+  background-color: rgb(231, 231, 231)
+}
+.titreReservaton{
+  font-weight: 900;
+}
