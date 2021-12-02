@@ -17,7 +17,7 @@ include(__ROOT__.'/Config/router.php');
     <?php include('templates/navbar.php'); ?>
     <div id="banner">
       <div>
-        <img src="../public/assets/banner.png" />
+        <img src="public/assets/banner.png" />
         <h1 class="d-lg-block">Vin sur Vin</h1>
       </div>
     </div>
