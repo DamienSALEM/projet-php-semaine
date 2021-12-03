@@ -6,7 +6,7 @@ class DbConnection
 
     public function __construct()
     {
-        require_once(__ROOT__.'/Database/config.php');
+        include(__ROOT__.'/Database/config.php');
         $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
         try {
     

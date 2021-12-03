@@ -1,3 +1,6 @@
+<style>
+    <?php include(__ROOT__.'/public/css/reservation.css') ?>
+</style>
 <?php
 require_once(__ROOT__.'/Controllers/BookingController.php');
 require_once(__ROOT__.'/Controllers/CartController.php');
@@ -43,7 +46,21 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
 // API endpoints
 if (isset($_GET['user']) && !empty($_POST['user'])) {
     if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
-        (new BookingModel)->add(array($_GET['user'], $_POST['date'], $_POST['nb-people']));
+        if(!empty($_POST['date'])){
+            (new BookingModel)->add(array(3, $_POST['nb-people'], $_POST['date'])); 
+            echo"
+            <div>
+                <p class=\"rep-reservation\">Votre réservation a été enregistrée.</p>
+                <p class=\"rep-reservation\">Nous vous attendons avec impatience ! </p>
+            </div>
+            ";
+        }
+        else {
+            echo"
+            <div>
+                <p class=\"error-reservation\">Une erreur c'est produite, recommencer !</p>
+            </div>";
+        }
     }
 }
 

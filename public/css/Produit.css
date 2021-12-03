@@ -13,6 +13,7 @@
 .element{
   background-color: rgb(255, 255, 255);
   border: solid 1px black;
+  height: 100%;
 }
 .bouttonPanier{
   background-color: white;
