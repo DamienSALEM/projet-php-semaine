@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/admin.css" />
+    <link rel="stylesheet" href="public/css/admin.css" />
     <title>Document</title>
 </head>
 
@@ -75,7 +75,6 @@
     <div class="col">
         <h3>Table de produit</h3>
         <button type="rajouter" class="btn">Rajouter</button>
-        <button type="modifier" class="btn">Modifier</button>
         <table class="table table-bordered" id="articles">
             <thead>
                 <tr>
@@ -92,21 +91,22 @@
                     <td>100</td>
                     <td>10€</td>
                     <td>villa.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td><button onclick="EffacerArticle()">Effacer</button><button>Modifier</button></td>
+
                 </tr>
                 <tr>
                     <td>Vodka rouge</td>
                     <td>20</td>
                     <td>20€</td>
                     <td>russia.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td><button onclick="EffacerArticle()">Effacer</button><button>Modifier</button></td>
                 </tr>
                 <tr>
                     <td>Coca</td>
                     <td>3000</td>
                     <td>4€</td>
                     <td>santa.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td><button onclick="EffacerArticle()">Effacer</button><button>Modifier</button></td>
                 </tr>
             </tbody>
         </table>

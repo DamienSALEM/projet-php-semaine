@@ -15,8 +15,8 @@
     <div class="container">
         <form action="" method="POST">
             <h3>Login Admin</h3>
-            <label for="user">Adresse email</label>
-            <input type="email" id="email" name="email" placeholder="admin@vin.com" minlength="5" required>
+            <label for="user">Nom d'Utilisateur</label>
+            <input type="user" id="user" name="user" placeholder="xyz123" minlength="5" required>
             <label for="pass">Mot de passe</label>
             <input type="password" id="pass" name="password" placeholder="Mot de Passe" maxlength="30" required>
             <input type="submit" value="login" class="btn">
