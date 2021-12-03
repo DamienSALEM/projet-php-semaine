@@ -23,7 +23,7 @@
       <nav class="collapse navbar-collapse row" id="navbar-content">
         <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
           <li class="nav-item">
-            <a href="../templates/profil.php" class="nav-link">
+            <a href="?page=homepage" class="nav-link">
               <img class="side-icon" src="public/assets/profile.png" />
             </a>
           </li>
@@ -40,10 +40,10 @@
             <a href="?page=products" class="nav-link">Magasin</a>
           </li>
           <?php
-          if (isset($_SESSION['user']) && is_numeric($_SESSION['user']))
+          if (isset($_SESSION['user']))
               echo '
                   <li class="nav-item">
-                    <a href="?page=login" class="nav-link">Déconnexion</a>
+                    <a href="?page=disconnect" class="nav-link">Déconnexion</a>
                   </li>
              ';
           else

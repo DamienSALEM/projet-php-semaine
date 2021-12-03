@@ -16,11 +16,11 @@
         <form action="" method="POST">
             <h3>Connexion</h3>
             <label for="user">Adresse email</label>
-            <input type="email" id="email" name="email" placeholder="dupont@yahoo.com" minlength="5" required>
+            <input type="text" id="email" name="email" placeholder="dupont@yahoo.com" minlength="5" required>
             <label for="pass">Mot de passe</label>
             <input type="password" id="pass" name="password" placeholder="Mot de Passe" maxlength="30" required>
             <p>Vous etes pas encore inscrit ? <a href="register.php">Inscrivez vous ici</a></p>
-            <input type="submit" value="login" class="btn">
+            <input name="login" type="submit" value="login" class="btn">
         </form>
         <a href="?page=register"><div class="redirectionInscription">Pas de compte ? <br>S'inscrire</div></a>
     </div>

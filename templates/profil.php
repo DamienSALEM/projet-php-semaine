@@ -14,11 +14,9 @@
   <title>Profil</title>
 </head>
 <body>
-  <?php include('navbar.php'); ?>
   <div class="fondPage">
   <div class="container ">
     <h1 id="titre">Votre Profil</h1>
-
       <div class="blockform w-75">
       <form action="post" class="row g-3">
         <div class="col-6"><input type="text" name="Nom" placeholder="Votre nom" class="w-100" id="element"></div>
@@ -26,7 +24,6 @@
         <div class="col-12"><input type="password" name="MotDePasse" placeholder="Mot de passe" class="w-100" id="element"></div>
         <div class="col-12"><input type="text" name="Mail" placeholder="Votre Mail" class="w-100" id="element"></div>
         <div class="col"><input type="button"  name="Bouttonajour" value="Mettre à jour" id="bouttonMiseAJour"></div>
-
       </form>
 </div>
 

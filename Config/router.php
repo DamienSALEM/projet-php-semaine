@@ -1,6 +1,3 @@
-<style>
-    <?php include(__ROOT__.'/public/css/reservation.css') ?>
-</style>
 <?php
 require_once(__ROOT__.'/Controllers/BookingController.php');
 require_once(__ROOT__.'/Controllers/CartController.php');
@@ -18,23 +15,43 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
             (new ProductController)->index();
             break;
         case 'booking':
-            (new BookingController)->index();
+            if (isset($_SESSION['user']))
+                (new BookingController)->index();
+            else
+                header('Location: ?page=login');
              break;
         case 'order':
             (new OrderController)->index();
             break;
         case 'cart':
-            (new CartController)->index();
+            if (isset($_SESSION['user']))
+                (new CartController)->index();
+            else
+                header('Location: ?page=login');
+            break;
         case 'admin':
             (new AdminController)->index();
+            break;
         case 'homepage':
             (new HomePageController)->index();
             break;
+        case 'profil':
+            if (isset($_SESSION['user']))
+                (new UserController)->index();
+            else
+                header('Location: ?page=login');
         case 'login':
-            (new UserController)->login_page();
+            if (isset($_SESSION['user']))
+                header('Location: index.php');
+            else
+                (new UserController)->login_page();
             break;
         case 'register':
             (new UserController)->register_page();
+            break;
+        case 'disconnect':
+            if (isset($_SESSION['user']) && !empty($_SESSION['user']))
+                (new UserController)->disconnect();
             break;
         default:
             break;
@@ -44,13 +61,13 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
 }
 
 // API endpoints
-if (isset($_GET['user']) && !empty($_GET['user'])) {
+if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
     if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
-        (new BookingModel)->add(array($_GET['user'], $_POST['nb-people'], $_POST['date']));
+        (new BookingModel)->add(array($_SESSION['user'], $_POST['nb-people'], $_POST['date']));
     }
 }
 
-if (!isset($_GET['user'])) {
+if (!isset($_SESSION['user'])) {
     if (isset($_POST['register']) && !empty($_POST['register'])) {
         (new UserModel)->add(array($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password']));
     }

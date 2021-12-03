@@ -22,16 +22,17 @@ class UserModel extends DefaultModel
     public function userExist($data) {
         $email_address = $data['email'];
         $password = $data['password'];
-        var_dump($email_address);
         $query = $this->pdo->query(
            "SELECT id
             FROM $this->table
-            WHERE email_address = $email_address AND password = $password"
+            WHERE email_address = '$email_address' AND password = '$password' "
         );
         $query->setFetchMode(PDO::FETCH_OBJ);
         $result = $query->fetch();
 
-        if ($result) return $result;
+        if ($result) {
+            return $result;
+        }
         return false;
     }
 }

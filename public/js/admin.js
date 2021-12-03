@@ -20,13 +20,13 @@ var today = new Date();
 //     return i;
 // }
 
-// setInterval(function(){ 
+// setInterval(function(){
 //     var today = new Date();
 //     var date = today.getDate() + ' / ' + (today.getMonth() + 1) + ' / ' + today.getFullYear();
 //     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 //     var dateTime = date + ' ' + time;
 //     document.getElementById("time").inanerHTML = dateTime;
-// }, 1000);   
+// }, 1000);
 
 
 function EffacerReservation() {
@@ -35,6 +35,4 @@ function EffacerReservation() {
 
 function EffacerArticle() {
     document.getElementById("articles").deleteRow(1);
-  }
-
-
+ }

@@ -5,8 +5,9 @@ require_once(__ROOT__.'/Models/UserModel.php');
 class UserController extends DefaultController
 {
     public function index() {
+        var_dump($_SESSION['user']->id);
         $this->render("profil", [
-            "user" => (new UserModel)->find($_SESSION["user"])
+            "user" => (new UserModel)->find($_SESSION["user"]->id)
         ]);
     }
 
@@ -20,15 +21,16 @@ class UserController extends DefaultController
 
     public function login($data) {
         $id = (new UserModel)->userExist($data);
-        var_dump($id);
-        if (!$id) {
-            session_start();
+        if ($id) {
             $_SESSION["user"] = $id;
         }
         return false;
     }
 
     public function disconnect() {
-        if ($_SESSION["user"]) session_destroy();
+        if ($_SESSION["user"]) {
+            session_unset();
+            header('Location: index.php');
+        }
     }
 }
