@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 30 nov. 2021 à 15:05
--- Version du serveur :  5.7.26
--- Version de PHP :  7.3.5
+-- Host: localhost:3306
+-- Generation Time: Dec 03, 2021 at 10:36 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,45 +19,53 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `vin_sur_vin`
+-- Database: `vin_sur_vin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admins`
+-- Table structure for table `admins`
 --
 
-DROP TABLE IF EXISTS `admins`;
-CREATE TABLE IF NOT EXISTS `admins` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  PRIMARY KEY (`id`)
+  `password` varchar(256) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `booking`
+-- Table structure for table `booking`
 --
 
-DROP TABLE IF EXISTS `booking`;
-CREATE TABLE IF NOT EXISTS `booking` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `booking` (
+  `booking_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `nb_people` int(11) NOT NULL,
-  `date_time` datetime NOT NULL,
-  PRIMARY KEY (`user_id`)
+  `date_time` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`booking_id`, `user_id`, `nb_people`, `date_time`) VALUES
+(3, 1, 6, '2021-12-22 00:00:00'),
+(4, 2, 3, '2021-12-03 00:00:00'),
+(5, 2, 4, '2021-12-09 00:00:00'),
+(6, 3, 10, '2021-12-04 00:00:00'),
+(7, 3, 1, '2021-12-02 00:00:00'),
+(8, 3, 1, '2021-12-02 00:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cart`
+-- Table structure for table `cart`
 --
 
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE IF NOT EXISTS `cart` (
+CREATE TABLE `cart` (
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -65,18 +73,16 @@ CREATE TABLE IF NOT EXISTS `cart` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE IF NOT EXISTS `categories` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
@@ -90,25 +96,22 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `orders`
+-- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `orders`;
-CREATE TABLE IF NOT EXISTS `orders` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
   `date` date NOT NULL,
-  `state` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  `state` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `order_products`
+-- Table structure for table `order_products`
 --
 
-DROP TABLE IF EXISTS `order_products`;
-CREATE TABLE IF NOT EXISTS `order_products` (
+CREATE TABLE `order_products` (
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -116,11 +119,10 @@ CREATE TABLE IF NOT EXISTS `order_products` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `payment_details`
+-- Table structure for table `payment_details`
 --
 
-DROP TABLE IF EXISTS `payment_details`;
-CREATE TABLE IF NOT EXISTS `payment_details` (
+CREATE TABLE `payment_details` (
   `user_id` int(11) NOT NULL,
   `cc_name` varchar(50) NOT NULL,
   `cc_number` varchar(16) NOT NULL,
@@ -131,12 +133,11 @@ CREATE TABLE IF NOT EXISTS `payment_details` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `products`
+-- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `category_id` int(11) NOT NULL,
   `brand` varchar(50) NOT NULL,
@@ -145,12 +146,11 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` float NOT NULL,
   `promotion` int(11) DEFAULT NULL,
   `image` varchar(256) NOT NULL,
-  `is_in_menu` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+  `is_in_menu` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `category_id`, `brand`, `origin_country`, `stock`, `price`, `promotion`, `image`, `is_in_menu`) VALUES
@@ -170,18 +170,104 @@ INSERT INTO `products` (`id`, `name`, `category_id`, `brand`, `origin_country`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `firstname` varchar(30) NOT NULL,
   `lastname` varchar(30) NOT NULL,
   `email_address` varchar(128) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  PRIMARY KEY (`id`)
+  `password` varchar(256) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email_address`, `password`) VALUES
+(1, 'Thomas', 'Jallu', 'thomas.jallu@gmail.com', 'toto78920');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`booking_id`),
+  ADD KEY `user_id` (`user_id`) USING BTREE;
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

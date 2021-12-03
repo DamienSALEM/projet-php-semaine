@@ -3,9 +3,11 @@ require_once(__ROOT__.'/Core/DefaultModel.php');
 
 class AdminModel extends DefaultModel
 {
+
+    protected $table = 'admins';
+
     public function __construct() {
         parent::__construct();
-        $this->$table = 'admins';
     }
 
     public function add($data) {
@@ -19,12 +21,12 @@ class AdminModel extends DefaultModel
     }
 
     public function adminExist($data) {
-        $username = $data['username'];
-        $password = $data['password'];
+        $username = $data['usernameAdmin'];
+        $password = $data['passwordAdmin'];
 
-        $query = $this->$pdo->query(
+        $query = $this->pdo->query(
             "SELECT id
-             FROM $table
+             FROM $this->table
              WHERE username = $username
              AND password = $password"
         );

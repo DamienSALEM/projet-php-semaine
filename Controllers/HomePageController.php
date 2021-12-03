@@ -6,9 +6,7 @@ class HomePageController extends DefaultController
 {
 
     public function index() {
-        $this->render("homepage", [
-            "homepage" => (new HomePageModel)->findAll()
-        ]);
+        $this->render("homepage", []);
     }
 }
 ?>

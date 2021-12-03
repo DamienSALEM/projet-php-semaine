@@ -19,15 +19,13 @@
         <nav class="collapse navbar-collapse row" id="navbar-content">
             <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
                 <li class="nav-item">
-                    <a href="../templates/profil.php" class="nav-link">
+                    <a href="?page=profil" class="nav-link">
                         <img class="side-icon" src="public/assets/profile.png" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="?page=contact" class="nav-link">Contacter</a>
-                    <!-- <li class="nav-item">
                     <a href="?page=homepage" class="nav-link">Accueil</a>
-                </li> -->
+                </li>
                 <li class="nav-item">
                     <a href="?page=booking" class="nav-link">Reserver</a>
                 </li>
@@ -35,11 +33,22 @@
                     <a href="?page=homepage"><img class="logo" src="public/assets/logo.png" /></a>
                 </li>
                 <li class="nav-item">
-                    <a href="?page=Produit" class="nav-link">Magasin</a>
+                    <a href="?page=products" class="nav-link">Magasin</a>
                 </li>
-                <li class="nav-item">
+                <?php
+          if (isset($_SESSION['user']) && is_numeric($_SESSION['user']))
+              echo '
+                  <li class="nav-item">
+                    <a href="?page=login" class="nav-link">Déconnexion</a>
+                  </li>
+             ';
+          else
+              echo '
+                  <li class="nav-item">
                     <a href="?page=login" class="nav-link">Se connecter</a>
-                </li>
+                  </li>
+              ';
+          ?>
                 <li class="nav-item">
                     <a href="?page=cart" class="nav-link">
                         <img class="side-icon" src="public/assets/cart.png" />
