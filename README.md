@@ -1,5 +1,5 @@
 # projet-php-semaine du site Vin sur Vin.
 
-Projet réalisé sur HTML, CSS, PHP.
+Projet réalisé sur HTML, CSS, PHP & JavaScript.
 
-Special Thanks to Thomas Jallu, Cyril Mongrenier, Bastien Piedallu & Vu Quang Anh Doan.
+Réalise par Damien SALEM, Bastien PIEDALLU, Thomas JALLU, Cyril MONGRENIER & Vu Quang Anh DOAN.
