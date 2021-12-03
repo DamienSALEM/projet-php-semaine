@@ -56,3 +56,18 @@
 .bouttonProduit:hover{
   background-color: rgba(230, 230, 230, 0.8);
 }
+.bouttonSupprimer{
+  background-color: white;
+  border: solid black 1px;
+  width: 150px;
+  text-align: center;
+  height: 40px;
+  color: red;
+  cursor: pointer;
+
+}
+.bouttonSupprimer:hover{
+  border: solid red 1px;
+  color: white;
+  background-color: red;
+}

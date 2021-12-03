@@ -1,9 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9f0a14e9dba214397b25a1b5578563fb7ec6587f
 class DbConnection
 {
     protected $pdo;
