@@ -9,7 +9,7 @@ class AdminModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?, ?)";
+        $request = "INSERT INTO $table (username, password) VALUES (?, ?)";
         $this->save($request, $data);
     }
 

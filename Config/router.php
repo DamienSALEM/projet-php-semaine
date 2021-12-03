@@ -37,7 +37,7 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
             break;
     }
 } else {
-    return (new HomePageController)->index();
+    (new HomePageController)->index();
 }
 
 // API endpoints
@@ -48,8 +48,6 @@ if (isset($_GET['user']) && !empty($_POST['user'])) {
 }
 
 if (!isset($_GET['user'])) {
-    if (isset($_POST['register']) && !empty($_POST['register'])) {
+    if (isset($_POST['register']) && !empty($_POST['register'])) 
         (new UserModel)->add(array($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password']));
-        header('Location: localhost:8000/Vin_sur_vin?page=login');
-    }
 }
