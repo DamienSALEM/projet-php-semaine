@@ -1,6 +1,7 @@
 <?php
 define("__ROOT__", dirname(__FILE__));
 include(__ROOT__.'/Config/router.php');
+<<<<<<< HEAD
 ?>
 
 <!DOCTYPE html>
@@ -32,3 +33,6 @@ include(__ROOT__.'/Config/router.php');
 </body>
 
 </html>
+=======
+?>
+>>>>>>> 9f0a14e9dba214397b25a1b5578563fb7ec6587f

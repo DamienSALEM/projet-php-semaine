@@ -1,5 +1,6 @@
 <?php
 require_once(__ROOT__.'/Core/DefaultModel.php');
+require_once(__ROOT__.'/Database/DbConnection.php');
 
 class UserModel extends DefaultModel
 {
