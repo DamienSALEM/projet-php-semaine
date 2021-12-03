@@ -13,19 +13,20 @@
 
 <body>
     <div class="container">
-        <form action="" method="POST">
-            <h3>Inscription</h3>
-            <label for="create-user">Nom et Prénom de l'utilisateur</label>
-            <input type="text" id="nom" name="nom" placeholder="Charles Xavier" pattern="[a-zA-Z]+" minlength="5"
+        <form action="" method="POST" onsubmit="verif()">
+            <h3 class="titreInscription">Inscription</h3>
+            <label for="create-user">Nom</label>
+            <input type="text" id="nom" name="lastname" placeholder="Xavier" pattern="[a-zA-Z]+" minlength="2" required>
+            <label for="create-user">Prénom</label>
+            <input type="text" id="prenom" name="firstname" placeholder="Charles" pattern="[a-zA-Z]+" minlength="2"
                 required>
-            <label for="create-pass">Adresse Mail</label>
-            <input type="email" id="email" name="email" placeholder="c.xavier@mail.fr" maxlength="40" required>
+            <label for="email">Adresse Mail</label>
+            <input type="email" id="email" name="email" placeholder="c.xavier@mail.fr" maxlength="50" required>
             <label for="create-pass">Mot de passe</label>
-            <input type="text" id="pass" name="password" type="hidden" placeholder="Avec des chiffres"
+            <input type="password" id="pass" name="password" placeholder="Avec des chiffres"
                 pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" maxlength="30" required>
             <label for="create-pass">Confirmer Mot de passe</label>
-            <input type="text" id="re-pass" name="re-password" type="hidden" placeholder="Retaper le mot de passe"
-                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" maxlength="30" required>
+            <input id="re-pass" type="password" maxlength="30" required>
             <div class="row">
                 <p>
                     Vous êtes déja un membre ? <a href="login.php">Connectez vous</a>
@@ -41,10 +42,10 @@
                     </div>
                 </div> -->
             </div>
-            <input type="submit" value="S'inscrire" class="btn">
+            <input name="register" type="submit" value="S'inscrire" class="btn">
         </form>
     </div>
-
+    <script src="public\js\verificationMotDePasse.js"></script>
 </body>
 
 </html>

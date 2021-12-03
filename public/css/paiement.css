@@ -25,7 +25,7 @@
   border-radius: 3px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -78,4 +78,10 @@ span.price {
   .col-25 {
     margin-bottom: 20px;
   }
+}
+.redirectionInscription{
+  text-align: center;
+}
+.titreInscription{
+  text-align: center;
 }

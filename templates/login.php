@@ -22,6 +22,7 @@
             <p>Vous etes pas encore inscrit ? <a href="register.php">Inscrivez vous ici</a></p>
             <input type="submit" value="login" class="btn">
         </form>
+        <a href="?page=register"><div class="redirectionInscription">Pas de compte ? <br>S'inscrire</div></a>
     </div>
 </body>
 

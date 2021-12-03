@@ -25,6 +25,8 @@ class DefaultModel extends DbConnection
 
     public function save(string $request, array $item) {
         $query = $this->pdo->prepare($request);
+        var_dump($query);
+        var_dump($item);
 
         return $query->execute($item);
     }

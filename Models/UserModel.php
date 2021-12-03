@@ -6,20 +6,16 @@ class UserModel extends DefaultModel
 {
     public function __construct() {
         parent::__construct();
-        $this->$table = 'users';
+        $this->table = 'users';
     }
 
     public function add($data) {
-        if (!$this->checkPost()) return false;
-
-        $request = "INSERT INTO $table VALUES (?, ?, ?, ?)";
+        $request = "INSERT INTO $this->table (firstname, lastname, email_address, password) VALUES (?, ?, ?, ?)";
         $this->save($request, $data);
     }
 
     public function update($data) {
-        if (!$this->checkPost()) return false;
-
-        $request = "UPDATE $table SET (firstname=?, lastname=?, email_address=?, password=?)";
+        $request = "UPDATE $this->table SET (firstname=?, lastname=?, email_address=?, password=?)";
         $this->save($request, $data);
     }
 

@@ -9,7 +9,7 @@ class CategorieModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?)";
+        $request = "INSERT INTO $table (name) VALUES (?)";
         $this->save($request, $_POST);
     }
 

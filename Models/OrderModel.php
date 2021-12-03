@@ -9,7 +9,7 @@ class OrdersModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?, ?)";
+        $request = "INSERT INTO table  (date, state) VALUES (?, ?)";
         $this->save($request, $_POST);
     }
 

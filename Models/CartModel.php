@@ -11,7 +11,7 @@ class CartModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?, ?)";
+        $request = "INSERT INTO $table (user_id, product_id) VALUES (?, ?)";
         $this->save($request, $data);
     }
 

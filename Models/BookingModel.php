@@ -10,12 +10,12 @@ class BookingModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?, ?, ?)";
+        $request = "INSERT INTO $this->table (user_id, nb_people, date_time) VALUES (?, ?, ?)";
         $this->save($request, $data);
     }
 
     public function update($data) {
-        $request = "UPDATE $table SET (user_id=?, nb_people=?, date_time=?)";
+        $request = "UPDATE $this->table SET (user_id=?, nb_people=?, date_time=?)";
         $this->save($request, $data);
     }
 }
