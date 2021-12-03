@@ -22,12 +22,14 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
             (new BookingController)->index();
              break;
         case 'order':
-            (new OrderController)->index();
+            (new OrdersController)->index();
             break;
         case 'cart':
             (new CartController)->index();
+            break;
         case 'admin':
             (new AdminController)->index();
+            break;
         case 'loginadmin':
             (new LoginAdminController)->index();
             break;
@@ -48,11 +50,6 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
 }
 
 // API endpoints
-if (isset($_GET['user']) && !empty($_GET['user'])) {
-    if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
-        (new BookingModel)->add(array($_GET['user'], $_POST['nb-people'], $_POST['date']));
-    }
-}
 
 if (!isset($_GET['user'])) {
     if (isset($_POST['register']) && !empty($_POST['register'])) {
@@ -61,6 +58,9 @@ if (!isset($_GET['user'])) {
     if (isset($_POST['login']) && !empty($_POST['login'])) {
         (new UserController)->login($_POST);
     }
+}
+if (isset($_POST['usernameAdmin']) && !empty($_POST['usernameAdmin'])) {
+    (new AdminController)->login($_POST);
 }
 //if (isset($_GET['user']) && !empty($_POST['user'])) {
     if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {

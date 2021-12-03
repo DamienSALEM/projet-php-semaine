@@ -9,12 +9,11 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/css/admin.css" />
+    <link rel="stylesheet" href="public/css/admin.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <?php include('navbar.php'); ?>
 
     <h1>Admin Dashboard</h1>
     <div class="row">
@@ -52,21 +51,21 @@
                     <td>2</td>
                     <td>9/12/2021</td>
                     <td>dupont@yahoo.com</td>
-                    <td><button onclick="EffacerReservation()">Effacer</button></td>
+                    <td><button onclick="EffacerReservation()" class="btn">Effacer</button></td>
                 </tr>
                 <tr>
-                    <td>Ducon</td>
+                    <td>Dupot</td>
                     <td>12</td>
                     <td>19/12/2021</td>
                     <td>brrrrrrr6@papa.com</td>
-                    <td><button onclick="EffacerReservation()">Effacer</button></td>
+                    <td><button onclick="EffacerReservation()" class="btn">Effacer</button></td>
                 </tr>
                 <tr>
-                    <td>Zemour</td>
+                    <td>Alibaba</td>
                     <td>1</td>
                     <td>29/12/2021</td>
                     <td>futur-prez@elysee.fr</td>
-                    <td><button onclick="EffacerReservation()">Effacer</button></td>
+                    <td><button onclick="EffacerReservation()" class="btn">Effacer</button></td>
                 </tr>
             </tbody>
         </table>
@@ -74,8 +73,6 @@
     <hr class="solid">
     <div class="col">
         <h3>Table de produit</h3>
-        <button type="rajouter" class="btn">Rajouter</button>
-        <button type="modifier" class="btn">Modifier</button>
         <table class="table table-bordered" id="articles">
             <thead>
                 <tr>
@@ -88,28 +85,38 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Villageois</td>
+                    <td>Villageoise</td>
                     <td>100</td>
                     <td>10€</td>
                     <td>villa.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td>
+                        <button onclick="EffacerArticle()" class="btn">Effacer</button>
+                        <button type="modifier" class="btn">Modifier</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Vodka rouge</td>
+                    <td>Chablis</td>
                     <td>20</td>
                     <td>20€</td>
                     <td>russia.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td>
+                        <button onclick="EffacerArticle()" class="btn">Effacer</button>
+                        <button type="modifier" class="btn">Modifier</button>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Coca</td>
-                    <td>3000</td>
-                    <td>4€</td>
+                    <td>Gewurztraminer</td>
+                    <td>150</td>
+                    <td>14€</td>
                     <td>santa.png</td>
-                    <td><button onclick="EffacerArticle()">Effacer</button></td>
+                    <td>
+                        <button onclick="EffacerArticle()" class="btn">Effacer</button>
+                        <button type="modifier" class="btn">Modifier</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <button type="rajouter" class="btn">Rajouter</button>
     </div>
     <hr class="solid">
 
@@ -145,7 +152,7 @@
                     <td>v-20568;v-31245;v-76555</td>
                     <td>4018902</td>
                     <td>4/12/2021</td>
-                    <td>Livraison</td>
+                    <td>Termine</td>
                 </tr>
                 <tr>
                     <td>00000994</td>
@@ -162,10 +169,10 @@
     </script>
     <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@26.2.0/dist/ag-grid-enterprise.min.js">
     </script>
-    <script src="../public/js/table.js">
+    <script src="public/js/table.js">
     </script>
 
 </body>
-<script type="text/javascript" src="../public/js/admin.js"></script>
+<script type="text/javascript" src="public/js/admin.js"></script>
 
 </html>
