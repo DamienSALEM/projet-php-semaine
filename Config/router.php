@@ -1,3 +1,6 @@
+<style>
+    <?php include(__ROOT__.'/public/css/reservation.css') ?>
+</style>
 <?php
 require_once(__ROOT__.'/Controllers/BookingController.php');
 require_once(__ROOT__.'/Controllers/CartController.php');
@@ -41,13 +44,17 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
 }
 
 // API endpoints
-if (isset($_GET['user']) && !empty($_POST['user'])) {
+if (isset($_GET['user']) && !empty($_GET['user'])) {
     if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
-        (new BookingModel)->add(array($_GET['user'], $_POST['date'], $_POST['nb-people']));
+        (new BookingModel)->add(array($_GET['user'], $_POST['nb-people'], $_POST['date']));
     }
 }
 
 if (!isset($_GET['user'])) {
-    if (isset($_POST['register']) && !empty($_POST['register'])) 
+    if (isset($_POST['register']) && !empty($_POST['register'])) {
         (new UserModel)->add(array($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password']));
+    }
+    if (isset($_POST['login']) && !empty($_POST['login'])) {
+        (new UserController)->login($_POST);
+    }
 }

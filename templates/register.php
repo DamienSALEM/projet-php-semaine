@@ -31,16 +31,6 @@
                 <p>
                     Vous êtes déja un membre ? <a href="login.php">Connectez vous</a>
                 </p>
-
-                <!-- <div class="col-50">
-                    <div class="row">
-                        <input type="radio" class="retard-btn" id="rappel"><label for="rappel">Se rappeler de
-                            moi</label>
-                    </div>
-                    <div class="col-50">
-                        <p>Mot de Passe oublie? Contacter le restaurant.</p>
-                    </div>
-                </div> -->
             </div>
             <input name="register" type="submit" value="S'inscrire" class="btn">
         </form>
