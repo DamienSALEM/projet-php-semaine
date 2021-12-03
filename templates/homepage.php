@@ -1,9 +1,3 @@
-<?php
-define("__ROOT__", dirname(__FILE__));
-include(__ROOT__.'/Config/router.php');
-<<<<<<< HEAD:index1.php
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,7 +9,6 @@ include(__ROOT__.'/Config/router.php');
     <title>Vin sur Vin</title>
   </head>
   <body>
-    <?php include('templates/navbar.php'); ?>
     <div id="banner">
       <div>
         <img src="public/assets/banner.png" />
@@ -25,6 +18,3 @@ include(__ROOT__.'/Config/router.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
-=======
-?>
->>>>>>> 9f0a14e9dba214397b25a1b5578563fb7ec6587f:index.php

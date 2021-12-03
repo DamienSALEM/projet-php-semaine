@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/paiement.css" />
+    <link rel="stylesheet" href="public/css/paiement.css" />
     <title>Inscription</title>
 </head>
 
 <body>
-    <?php include('navbar.php'); ?>
     <div class="container">
         <form action="" method="POST">
             <h3>Inscription</h3>
-            <label for="create-user">Nom et Prènom de l'utilisateur</label>
+            <label for="create-user">Nom et Prénom de l'utilisateur</label>
             <input type="text" id="nom" name="nom" pattern="[a-zA-Z]+" minlength="5" required>
             <label for="create-pass">Adresse Mail</label>
             <input type="email" id="pass" name="password" placeholder="dupont@mail.fr" maxlength="30" required>

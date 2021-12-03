@@ -5,6 +5,6 @@ require_once(__ROOT__.'/Models/OrderModel.php');
 
 class OrdersController extends DefaultController
 {
-   
+
 }
 ?>
