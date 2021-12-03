@@ -18,8 +18,7 @@ class PDF extends FPDF{
 }
 }
 $ordertable= new OrdersModel();
-$order=$ordertable->orderDetails($_GET[0]);
-
+$order=$ordertable->orderDetails($_GET[0]); #only need to receive the id of the order
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
