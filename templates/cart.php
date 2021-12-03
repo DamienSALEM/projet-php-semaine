@@ -18,22 +18,22 @@
 		<h1 class="titrePanier">Votre panier</h1>
 		<div class="container blockProduit">
 				<div class="element row">
-					<div class="col-4"><img src="../Image/bouteil.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="../public/assets/bouteille.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Domaine Leroy Chambertin Grand Cru</p></div>
 						<div class="col-4"><p>855€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_2.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="../public/assets/bouteille_2.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Julia noventa</p></div>
 						<div class="col-4"><p>15€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_3.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="../public/assets/bouteille_3.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Vin pas ouf</p></div>
 						<div class="col-4"><p>0.15€</p></div>
 				</div>
         <div class="element row">
-					<div class="col-4"><img src="../Image/bouteille_4.jpg" width="100" height="100" class="imageProduit"/></div>
+					<div class="col-4"><img src="../public/assets/bouteille_4.jpg" width="100" height="100" class="imageProduit"/></div>
 						<div class="col-4"><p>Vin rouge LA VILLAGEOISE</p></div>
 						<div class="col-4"><p>8655€</p></div>
 				</div>

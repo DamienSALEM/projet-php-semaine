@@ -37,7 +37,7 @@
             <img class="logo" src="public/assets/logo.png" />
           </li>
           <li class="nav-item">
-            <a href="?page=products" class="nav-link">Magasin</a>
+            <a href="?page=Produit" class="nav-link">Magasin</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">Nous contacter</a>
