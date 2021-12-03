@@ -23,7 +23,7 @@
       <nav class="collapse navbar-collapse row" id="navbar-content">
         <ul class="navbar-nav col-12 col-xl-10 offset-xl-1">
           <li class="nav-item">
-            <a href="../templates/profil.php" class="nav-link">
+            <a href="?page=profil" class="nav-link">
               <img class="side-icon" src="public/assets/profile.png" />
             </a>
           </li>

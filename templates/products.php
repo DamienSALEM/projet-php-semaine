@@ -24,7 +24,7 @@
 						<img src=\"$product->image\" width=\"200\" height=\"200\">
 						<p><i>$product->name</i></p>
 						<p class=\"prix\">$product->price €</p>
-						<input type=\"button\" value=\"Ajouter au panier\" class=\"bouttonPanier\">
+						<input type=\"button\" value=\"Ajouter au panier 🍷\" class=\"bouttonPanier\">
 					</div>
 				</div>"
 			;
