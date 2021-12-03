@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/contact.css" />
+    <link rel="stylesheet" href="public/css/contact.css" />
     <title>Document</title>
 </head>
 
@@ -24,7 +24,7 @@
          start with / for root relative -OR-
          start with . for url relative -->
             <!-- <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" /> -->
-            <input type="hidden" name="success_url" value="./vin-sur-vin" />
+            <input type="hidden" name="success_url" value="http://localhost/IPSSI/projet-php-semaine/?page=contact" />
             <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
 
 

@@ -23,8 +23,7 @@
             <label for="email">Adresse Mail</label>
             <input type="email" id="email" name="email" placeholder="c.xavier@mail.fr" maxlength="50" required>
             <label for="create-pass">Mot de passe</label>
-            <input type="password" id="pass" name="password" placeholder="Avec des chiffres"
-                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" maxlength="30" required>
+            <input type="password" id="pass" name="password" placeholder="Avec des chiffres" maxlength="30" required>
             <label for="create-pass">Confirmer Mot de passe</label>
             <input id="re-pass" type="password" maxlength="30" required>
             <div class="row">

@@ -6,11 +6,20 @@ require_once(__ROOT__.'/Controllers/AdminController.php');
 require_once(__ROOT__.'/Controllers/UserController.php');
 require_once(__ROOT__.'/Controllers/ProductController.php');
 require_once(__ROOT__.'/Controllers/HomePageController.php');
+require_once(__ROOT__.'/Controllers/PaymentController.php');
+require_once(__ROOT__.'/Controllers/ContactController.php');
 require_once(__ROOT__.'/Models/BookingModel.php');
+
 
 // Routes
 if (isset($_GET["page"]) && !empty($_GET["page"])) {
     switch ($_GET["page"]) {
+        case 'contact':
+            (new ContactController)->index();
+            break;
+        case 'payment': 
+            (new PaymentController)->index();
+            break;
         case 'products':
             (new ProductController)->index();
             break;
@@ -63,25 +72,8 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
 // API endpoints
 if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
     if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
-        (new BookingModel)->add(array($_SESSION['user'], $_POST['nb-people'], $_POST['date']));
-    }
-}
-
-if (!isset($_SESSION['user'])) {
-    if (isset($_POST['register']) && !empty($_POST['register'])) {
-        (new UserModel)->add(array($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password']));
-    }
-    if (isset($_POST['login']) && !empty($_POST['login'])) {
-        (new UserController)->login($_POST);
-    }
-}
-if (isset($_POST['usernameAdmin']) && !empty($_POST['usernameAdmin'])) {
-    (new AdminController)->login($_POST);
-}
-//if (isset($_GET['user']) && !empty($_POST['user'])) {
-    if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
         if(!empty($_POST['date'])){
-            (new BookingModel)->add(array(3, $_POST['nb-people'], $_POST['date']));
+            (new BookingModel)->add(array($_SESSION['user']->id, $_POST['nb-people'], $_POST['date']));
             echo"
             <div>
                 <p class=\"rep-reservation\">Votre réservation a été enregistrée.</p>
@@ -96,4 +88,21 @@ if (isset($_POST['usernameAdmin']) && !empty($_POST['usernameAdmin'])) {
             </div>";
         }
     }
+}
+
+if (!isset($_SESSION['user'])) {
+    if (isset($_POST['register']) && !empty($_POST['register'])) {
+        (new UserModel)->add(array($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password']));
+    }
+    if (isset($_POST['login']) && !empty($_POST['login'])) {
+        (new UserController)->login($_POST);
+    }
+}
+if (isset($_POST['usernameAdmin']) && !empty($_POST['usernameAdmin'])) {
+    (new AdminController)->login($_POST);
+}
+
+
+//if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
+ //   (new BookingModel)->add(array($_SESSION['user'], $_POST['nb-people'], $_POST['date']));
 //}

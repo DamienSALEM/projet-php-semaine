@@ -42,7 +42,9 @@
 				</div>
         
         <div class="row">
-          <input type="button" value="Commander" class="bouttonCommander"/>
+			<a href="?page=payment">
+			<input type="button" value="Commander" class="bouttonCommander"/>
+			</a>
         </div>
         
     		</div>

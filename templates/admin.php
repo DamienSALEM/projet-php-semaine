@@ -14,10 +14,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6cb77c77819f2ba680b0f1004a7b29a8b4579106
     <h1>Admin Dashboard</h1>
     <div class="col">
         <h3>Table de reservation</h3>
@@ -47,7 +43,6 @@
     <hr class="solid">
     <div class="col">
         <h3>Table de produit</h3>
->>>>>>> 6cb77c77819f2ba680b0f1004a7b29a8b4579106
         <table class="table table-bordered" id="articles">
             <thead>
                 <tr>
@@ -115,7 +110,6 @@
                     <td>2/12/2022</td>
                     <td>Termine</td>
                 </tr>
->>>>>>> 6cb77c77819f2ba680b0f1004a7b29a8b4579106
             </tbody>
         </table>
     </div>
@@ -124,11 +118,6 @@
     </script>
     <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@26.2.0/dist/ag-grid-enterprise.min.js">
     </script>
-<<<<<<< HEAD
-
-</body>
-</html>
-=======
     <script src="public/js/table.js">
     </script>
 
@@ -136,4 +125,3 @@
 <script type="text/javascript" src="public/js/admin.js"></script>
 
 </html>
->>>>>>> 6cb77c77819f2ba680b0f1004a7b29a8b4579106
