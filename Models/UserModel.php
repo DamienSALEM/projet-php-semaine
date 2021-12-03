@@ -6,11 +6,11 @@ class UserModel extends DefaultModel
 {
     public function __construct() {
         parent::__construct();
-        $this->$table = 'users';
+        $this->table = 'users';
     }
 
     public function add($data) {
-        $request = "INSERT INTO $this->table VALUES (?, ?, ?, ?)";
+        $request = "INSERT INTO $this->table (firstname, lastname, email_address, password) VALUES (?, ?, ?, ?)";
         $this->save($request, $data);
     }
 

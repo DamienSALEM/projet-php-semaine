@@ -10,7 +10,7 @@ class ProductModel extends DefaultModel
     }
 
     public function add($data) {
-        $request = "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $request = "INSERT INTO $table (name, category_id, brand, origin_country, stock, price, promotion, image, is_in_menu) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $this->save($request, $data);
     }
 
