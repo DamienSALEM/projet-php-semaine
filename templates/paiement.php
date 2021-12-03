@@ -35,7 +35,7 @@
                         pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$" required>
                 </div>
                 <div class="col-50">
-                    <label for="cvv">CCV</label>
+                    <label for="cvv">CVV</label>
                     <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="352" pattern="[0-9]+" required>
                 </div>
             </div>

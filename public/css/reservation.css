@@ -38,3 +38,16 @@
 .titreReservaton{
   font-weight: 900;
 }
+
+.rep-reservation{
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-size: 25px;
+}
+.error-reservation{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+}

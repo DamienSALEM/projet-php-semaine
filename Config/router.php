@@ -1,3 +1,6 @@
+<style>
+    <?php include(__ROOT__.'/public/css/reservation.css') ?>
+</style>
 <?php
 require_once(__ROOT__.'/Controllers/BookingController.php');
 require_once(__ROOT__.'/Controllers/CartController.php');
