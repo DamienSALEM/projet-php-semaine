@@ -38,12 +38,6 @@
           </li>
           <li class="nav-item">
             <a href="?page=products" class="nav-link">Magasin</a>
-<<<<<<< HEAD
-          </li>
-          <li class="nav-item">
-            <a href="?page=login" class="nav-link">Se connecter</a>
-=======
->>>>>>> 2f68e14b2ade42adb519d8dba062cb797770bb6a
           </li>
           <?php
           if (isset($_SESSION['user']) && is_numeric($_SESSION['user']))

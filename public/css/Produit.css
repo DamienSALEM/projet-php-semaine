@@ -13,14 +13,10 @@
 .element{
   background-color: rgb(255, 255, 255);
   border: solid 1px black;
-<<<<<<< HEAD
   border-radius: 6px;
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  padding: 5px;
-=======
-  height: 100%;
->>>>>>> 2f68e14b2ade42adb519d8dba062cb797770bb6a
+  padding: 15px;
 }
 .bouttonPanier{
   background-color: white;
@@ -37,4 +33,7 @@
 .prix{
   color: green;
   font-size: 20px;
+}
+.nomProduit{
+  height: 80px;
 }
