@@ -15,10 +15,15 @@
     <div class="container">
         <form action="" method="POST">
             <h3>Login Admin</h3>
+<<<<<<< HEAD:templates/adminlogin.php
+            <label for="user">Nom d'Utilisateur</label>
+            <input type="user" id="user" name="user" placeholder="xyz123" minlength="5" required>
+=======
             <label for="user">Adresse email</label>
-            <input type="email" id="email" name="email" placeholder="admin@vin.com" minlength="5" required>
+            <input type="text" id="usernameAdmin" name="usernameAdmin" placeholder="admin@vin.com" minlength="5" required>
+>>>>>>> 093c01ff6561c76363651d6f8f260ef5a6e13429:templates/loginadmin.php
             <label for="pass">Mot de passe</label>
-            <input type="password" id="pass" name="password" placeholder="Mot de Passe" maxlength="30" required>
+            <input type="password" id="passwordAdmin" name="passwordAdmin" placeholder="Mot de Passe" maxlength="30" required>
             <input type="submit" value="login" class="btn">
         </form>
     </div>

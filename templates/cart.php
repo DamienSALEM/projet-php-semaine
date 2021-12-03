@@ -18,8 +18,8 @@
 		<div class="container blockProduit">
 				<div class="element row">
 					<div class="col-3"><img src="public/assets/bouteille.jpg" width="100" height="100" class="imageProduit"/></div>
-						<div class="col-3"><p>Domaine Leroy Chambertin Grand Cru</p></div>
-						<div class="col-3"><p>855€</p></div>
+						<div class="col-3"><p><i>Domaine Leroy Chambertin Grand Cru</i></p></div>
+						<div class="col-3"><p class="prix">855€</p></div>
 						<div class="col-3"><input type="button" value="Supprimer" class="bouttonSupprimer"></div>
 				</div>
         <div class="element row">

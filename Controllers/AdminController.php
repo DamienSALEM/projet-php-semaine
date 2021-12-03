@@ -10,16 +10,18 @@ class AdminController extends DefaultController
     public function index() {
         $this->render("admin", [
             "products" => (new ProductModel)->findAll(),
-            "booking" => (new BookingModel)->findAll(),
-            "orders" => (new OrderModel)->findAll()
+            "booking" => (new BookingModel)->findAll()
+           // "orders" => (new OrderModel)->findAll()
         ]);
-    }
+    }   
 
     public function login($data) {
         $id = (new AdminModel)->adminExist($data);
-        if (!$id) {
+        if (!id) {
             session_start();
             $_SESSION["admin"] = $id;
+            $this->redirectToRoute(__ROOT__.'?page=admin');
+            echo"done!";
         }
         return false;
     }

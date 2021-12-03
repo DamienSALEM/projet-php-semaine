@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <link rel="stylesheet" href="public/css/navbar.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="container-fluid navbar navbar-expand-lg">
       <div id="toggler-container" class="d-lg-none">
         <button
@@ -53,13 +55,14 @@
                   </li>
               ';
           ?>
-          <li class="nav-item">
-            <a href="?page=cart" class="nav-link">
-              <img class="side-icon" src="public/assets/cart.png" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+                <li class="nav-item">
+                    <a href="?page=cart" class="nav-link">
+                        <img class="side-icon" src="public/assets/cart.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-  </body>
+</body>
+
 </html>

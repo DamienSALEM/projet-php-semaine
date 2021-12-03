@@ -1,7 +1,7 @@
 <?php
 require_once(__ROOT__.'/Controllers/BookingController.php');
 require_once(__ROOT__.'/Controllers/CartController.php');
-require_once(__ROOT__.'/Controllers/OrderController.php');
+require_once(__ROOT__.'/Controllers/OrdersController.php');
 require_once(__ROOT__.'/Controllers/AdminController.php');
 require_once(__ROOT__.'/Controllers/UserController.php');
 require_once(__ROOT__.'/Controllers/ProductController.php');
@@ -21,7 +21,7 @@ if (isset($_GET["page"]) && !empty($_GET["page"])) {
                 header('Location: ?page=login');
              break;
         case 'order':
-            (new OrderController)->index();
+            (new OrdersController)->index();
             break;
         case 'cart':
             if (isset($_SESSION['user']))
@@ -75,3 +75,25 @@ if (!isset($_SESSION['user'])) {
         (new UserController)->login($_POST);
     }
 }
+if (isset($_POST['usernameAdmin']) && !empty($_POST['usernameAdmin'])) {
+    (new AdminController)->login($_POST);
+}
+//if (isset($_GET['user']) && !empty($_POST['user'])) {
+    if (isset($_POST['add-booking']) && !empty($_POST['add-booking'])) {
+        if(!empty($_POST['date'])){
+            (new BookingModel)->add(array(3, $_POST['nb-people'], $_POST['date']));
+            echo"
+            <div>
+                <p class=\"rep-reservation\">Votre réservation a été enregistrée.</p>
+                <p class=\"rep-reservation\">Nous vous attendons avec impatience ! </p>
+            </div>
+            ";
+        }
+        else {
+            echo"
+            <div>
+                <p class=\"error-reservation\">Une erreur c'est produite, recommencer !</p>
+            </div>";
+        }
+    }
+//}

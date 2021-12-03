@@ -3,6 +3,8 @@ require_once(__ROOT__.'/Core/DefaultModel.php');
 
 class OrderModel extends DefaultModel
 {
+    protected $table = 'orders';
+
     public function __construct() {
         parent::__construct();
         $this->table = 'orders';
