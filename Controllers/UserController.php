@@ -20,6 +20,7 @@ class UserController extends DefaultController
 
     public function login($data) {
         $id = (new UserModel)->userExist($data);
+        var_dump($id);
         if (!$id) {
             session_start();
             $_SESSION["user"] = $id;

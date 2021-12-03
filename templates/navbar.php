@@ -37,11 +37,22 @@
             <img class="logo" src="public/assets/logo.png" />
           </li>
           <li class="nav-item">
-            <a href="?page=Produit" class="nav-link">Magasin</a>
+            <a href="?page=products" class="nav-link">Magasin</a>
           </li>
-          <li class="nav-item">
-            <a href="?page=login" class="nav-link">Se connecter</a>
-          </li>
+          <?php
+          if (isset($_SESSION['user']) && is_numeric($_SESSION['user']))
+              echo '
+                  <li class="nav-item">
+                    <a href="?page=login" class="nav-link">Déconnexion</a>
+                  </li>
+             ';
+          else
+              echo '
+                  <li class="nav-item">
+                    <a href="?page=login" class="nav-link">Se connecter</a>
+                  </li>
+              ';
+          ?>
           <li class="nav-item">
             <a href="?page=cart" class="nav-link">
               <img class="side-icon" src="public/assets/cart.png" />

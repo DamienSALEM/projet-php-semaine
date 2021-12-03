@@ -16,12 +16,12 @@
         <form action="" method="POST">
             <h3>Connexion</h3>
             <label for="user">Adresse email</label>
-            <input type="email" id="email" name="email" placeholder="dupont@yahoo.com" pattern="[a-zA-Z0-9]+"
+            <input type="text" id="email" name="email" placeholder="dupont@yahoo.com"
                 minlength="5" required>
             <label for="pass">Mot de passe</label>
-            <input type="text" id="pass" name="password" type="hidden" placeholder="Mot de Passe" pattern="[0-9]+"
+            <input type="password" id="pass" name="password" placeholder="Mot de Passe"
                 maxlength="30" required>
-            <input type="submit" value="login" class="btn">
+            <input name="login" type="submit" value="login" class="btn">
         </form>
     </div>
 </body>

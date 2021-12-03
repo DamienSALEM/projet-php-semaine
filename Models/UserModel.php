@@ -19,19 +19,19 @@ class UserModel extends DefaultModel
         $this->save($request, $data);
     }
 
-    public function userExist($username, $password) {
-        $username = $data['username'];
+    public function userExist($data) {
+        $email_address = $data['email'];
         $password = $data['password'];
-
-        $query = $this->$pdo->query(
-            "SELECT COUNT(*)
-             FROM $table
-             WHERE username = $username
-             AND password = $password"
+        var_dump($email_address);
+        $query = $this->pdo->query(
+           "SELECT id
+            FROM $this->table
+            WHERE email_address = $email_address AND password = $password"
         );
+        $query->setFetchMode(PDO::FETCH_OBJ);
         $result = $query->fetch();
 
-        if ($result > 0) return true;
+        if ($result) return $result;
         return false;
     }
 }

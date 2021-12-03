@@ -22,7 +22,7 @@ class AdminModel extends DefaultModel
         $username = $data['username'];
         $password = $data['password'];
 
-        $query = $this->$pdo->query(
+        $query = $this->pdo->query(
             "SELECT id
              FROM $table
              WHERE username = $username
