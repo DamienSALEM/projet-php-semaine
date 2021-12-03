@@ -2,7 +2,7 @@
 
 .titreProduits{
   text-align: center;
-  color: white;
+  color: black;
   font-weight: 1500;
 }
 
@@ -13,6 +13,10 @@
 .element{
   background-color: rgb(255, 255, 255);
   border: solid 1px black;
+  border-radius: 6px;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 5px;
 }
 .bouttonPanier{
   background-color: white;
@@ -20,4 +24,8 @@
 }
 .bouttonPanier:hover{
   background-color: rgb(240, 240, 240);
+}
+.prix{
+  color: green;
+  font-size: 20px;
 }
