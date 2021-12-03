@@ -14,18 +14,18 @@
     <div class="container">
         <form action="" method="POST">
             <h3>Inscription</h3>
-            <label for="create-user">Nom et Prénom de l'utilisateur</label>
-            <input type="text" id="nom" name="nom" pattern="[a-zA-Z]+" minlength="5" required>
-            <label for="create-pass">Adresse Mail</label>
-            <input type="email" id="pass" name="password" placeholder="dupont@mail.fr" maxlength="30" required>
+            <label for="create-user">Nom</label>
+            <input type="text" id="nom" name="lastname" pattern="[a-zA-Z]+" minlength="5" required>
+            <label for="create-user">Prénom</label>
+            <input type="text" id="nom" name="firstname" pattern="[a-zA-Z]+" minlength="5" required>
+            <label for="email">Adresse Mail</label>
+            <input type="text" id="email" name="email" placeholder="dupont@mail.fr" maxlength="50" required>
             <label for="create-pass">Mot de passe</label>
-            <input type="text" id="pass" name="password" type="hidden" placeholder="Avec des symboles et chiffres"
+            <input id="pass" name="password" type="password"
                 maxlength="30" required>
             <label for="create-pass">Confirmer Mot de passe</label>
-            <input type="text" id="re-pass" name="re-password" type="hidden" placeholder="Avec des symboles et chiffres"
+            <input id="re-pass" type="password"
                 maxlength="30" required>
-            <label for="create-pass">Adresse Mail</label>
-            <input type="text" id="pass" name="password" placeholder="dupont@mail.fr" maxlength="30" required>
             <div class="row">
                 <!-- <div class="col-50">
                     <div class="row">
@@ -37,7 +37,7 @@
                     </div>
                 </div> -->
             </div>
-            <input type="submit" value="S'inscrire" class="btn">
+            <input name="register" type="submit" value="S'inscrire" class="btn">
         </form>
     </div>
 

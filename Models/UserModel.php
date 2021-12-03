@@ -10,16 +10,12 @@ class UserModel extends DefaultModel
     }
 
     public function add($data) {
-        if (!$this->checkPost()) return false;
-
-        $request = "INSERT INTO $table VALUES (?, ?, ?, ?)";
+        $request = "INSERT INTO $this->table VALUES (?, ?, ?, ?)";
         $this->save($request, $data);
     }
 
     public function update($data) {
-        if (!$this->checkPost()) return false;
-
-        $request = "UPDATE $table SET (firstname=?, lastname=?, email_address=?, password=?)";
+        $request = "UPDATE $this->table SET (firstname=?, lastname=?, email_address=?, password=?)";
         $this->save($request, $data);
     }
 
