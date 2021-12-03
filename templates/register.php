@@ -12,8 +12,8 @@
 
 <body>
     <div class="container">
-        <form action="" method="POST">
-            <h3>Inscription</h3>
+        <form action="" method="POST" onsubmit="verif()">
+            <h3 class="titreInscription">Inscription</h3>
             <label for="create-user">Nom</label>
             <input type="text" id="nom" name="lastname" pattern="[a-zA-Z]+" minlength="5" required>
             <label for="create-user">Prénom</label>
@@ -40,7 +40,7 @@
             <input name="register" type="submit" value="S'inscrire" class="btn">
         </form>
     </div>
-
+    <script src="public\js\verificationMotDePasse.js"></script>
 </body>
 
 </html>

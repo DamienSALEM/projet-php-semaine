@@ -23,6 +23,7 @@
                 maxlength="30" required>
             <input type="submit" value="login" class="btn">
         </form>
+        <a href="?page=register"><div class="redirectionInscription">Pas de compte ? <br>S'inscrire</div></a>
     </div>
 </body>
 </html>
